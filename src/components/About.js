@@ -1,0 +1,52 @@
+import React from 'react'
+
+export default function About(props) {
+    let myStyle = {
+        color: props.mode === 'dark'?'white':'#042743',
+        backgroundColor: props.mode === 'dark'?'rgb(36 74 104)':'white',
+    }
+
+    return (
+        <div className='container'>
+            <h1 className='my-3' style = {{ color: props.mode === 'dark'?'white':'#042743'}}>About Us</h1>
+            <div className="accordion" id="accordionExample" >
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
+                        <button className="accordion-button" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>Analyze your Text</strong> 
+                        </button>
+                    </h2>
+                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div className="accordion-body" style={myStyle}>
+                            TextUtils gives you a way to analyze your text quickly and efficiently. Be it be word count, character count or other related functions. You can use all of them at just a click of a button. This will be your best friend in using text-based utilities.
+                        </div>
+                    </div>
+                </div>
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingTwo">
+                        <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <strong> Free to use</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div className="accordion-body" style={myStyle}>
+                            TextUtils is a free tool that provides instant functions on your text such as change to uppercase, copy text etc. It also gives you the word and character count and hence is very useful in writing text with certain word limit.
+                        </div>
+                    </div>
+                </div>
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingThree">
+                        <button className="accordion-button collapsed" style={myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                         <strong> Browser Compatible</strong>  
+                        </button>
+                    </h2>
+                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div className="accordion-body" style={myStyle}>
+                           This TextUtils software works in any web browser such as Chrome, Firefox, Edge, Internet Explorer, Opera etc. It suits to count characters in facebook, blog, books, word document, pdf document, essays etc. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
